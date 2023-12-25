@@ -27,7 +27,7 @@ public class Player {
 		
 		while(hasName == false) {
 			Scanner name = new Scanner(System.in);
-			playerName = name.nextLine();
+			playerName = name.nextLine().toUpperCase();
 			
 			if(!playerName.equals("")) {
 				System.out.println("Please type in your gender...");
@@ -39,11 +39,11 @@ public class Player {
 					Scanner age = new Scanner(System.in);
 					playerAge = age.nextInt();
 					
-					if((playerAge != 0) && !(playerAge < 10)) {
-						System.out.println("Your data is being proccesed please wait... (Your data is safe with us)...");
+					if((playerAge != 0)) {
+						System.out.println("Your data is being proccesed please wait... (Your data is safe with us)...\n_______________________________________");
 						hasName = true;
 					}else {
-						System.out.println("Please you have to provide your age and you have to be atleast (18) or above...");
+						System.out.println("Please you have to provide your age...");
 						hasName = true;
 					}
 				}else {
@@ -61,6 +61,8 @@ public class Player {
 		this.setName(playerName);
 		this.setGender(playerGender);
 		this.setAge(playerAge);
+		
+		Game.player = this;
 		
 		return this;
 			   

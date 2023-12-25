@@ -8,11 +8,12 @@ public class GameMain {
 		// TODO Auto-generated method stub
 		
 		Game game = new Game(null); // Instantiating the game
-		String anotation = ("Game");
+		String anotation = ("Games");
 		
 		 	 String [] games = new String[10];
 		 	 games[0] = ("Mind"+" "+anotation);
-		 	 games[2] = ("Word Guessing"+" "+anotation);
+		 	 games[1] = ("Word Guessing"+" "+anotation);
+		 	 games[2] = ("Number"+" "+anotation);
 		 	 
 		 	 game.setGameNames(games);
 		 	 
